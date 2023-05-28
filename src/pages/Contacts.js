@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { Loader } from 'components/Loader/Loader';
 import { ThreeDots } from "react-loader-spinner";
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 
@@ -39,16 +40,7 @@ const Contacts = () => {
       <h2>Contacts</h2>
       <Filter />
       
-    {isLoading &&     <ThreeDots 
-                height="80" 
-                width="80" 
-                radius="9"
-                color="grey" 
-                ariaLabel="three-dots-loading"
-                wrapperStyle={{}}
-                wrapperClassName=""
-                visible={true}
-                    />}
+    {isLoading &&     <CircularProgress style={{marginTop:'20px', marginLeft: '20px'}}/>}
       {!isLoading && <>
         
       
