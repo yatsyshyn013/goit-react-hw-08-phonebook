@@ -6,7 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 const SharedLayout = () => {
     return <div>
         <AppBar/>
-         <Suspense fallback={<CircularProgress />}>
+         <Suspense fallback={<CircularProgress style={{marginRight:'auto', marginLeft:'auto'}}/>}>
           <Outlet />
         </Suspense>
     </div>

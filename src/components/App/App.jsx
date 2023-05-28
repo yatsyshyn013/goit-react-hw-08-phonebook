@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { ThreeDots } from "react-loader-spinner";
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { lazy } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
@@ -31,7 +32,7 @@ export default function App() {
   
   
   return isRefreshing
-      ? 'Fetching user data'
+      ? <CircularProgress/>
       : (
         <Routes>
               <Route path='/' element={<SharedLayout/>}>
