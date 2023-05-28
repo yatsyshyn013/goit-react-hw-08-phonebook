@@ -54,7 +54,7 @@ export default function App() {
               <RestrictedRoute redirectTo="/contacts" component={<Login />} />
                 } />
             <Route path='/contacts' element={
-              <PrivateRoute redirectTo="/contacts" component={<Contacts />} />
+              <PrivateRoute redirectTo="/login" component={<Contacts />} />
             } />
               </Route>
               
