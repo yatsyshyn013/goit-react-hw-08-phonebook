@@ -1,6 +1,10 @@
 import { useDispatch } from "react-redux"
-import { Label, RegisterButton, RegisterInput, StyledRegisterForm } from "./RegisterForm.styled"
+import { Label, RegisterButton, StyledRegisterForm } from "./RegisterForm.styled"
 import { registerFetch } from "../../redux/auth/authOperations";
+import TextField from '@mui/material/TextField';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 
 
 export const RegisterForm = () => {
@@ -19,20 +23,39 @@ export const RegisterForm = () => {
     }
 
     return (
-        <StyledRegisterForm onSubmit={handleSubmit}>
+        <StyledRegisterForm onSubmit={handleSubmit} >
              <Label >
-                Username
-                <RegisterInput type="text" name="name" />
+                
+                <TextField
+                    type="text"
+                    name="name"
+                    id="outlined-basic"
+                    label="Username"
+                    variant="outlined"/>
             </Label>
             <Label>
-                Email
-                <RegisterInput type="email" name="email"/>
+                
+                <TextField
+                    
+                    type="email"
+                    name="email"
+                    id="outlined-basic"
+                    label="Email"
+                    variant="outlined"
+                />
             </Label>
             <Label>
-                Password
-                <RegisterInput type="password" name="password"/>
+                
+                <TextField
+                    type="password"
+                    name="password"
+                    id="outlined-basic"
+                    label="Password"
+                    variant="outlined"
+                
+                />
             </Label>
-            <RegisterButton type="submit">Register</RegisterButton>
+            <RegisterButton type="submit" variant="contained" >Register <PermContactCalendarIcon style={{width: '20px', marginLeft: '5px'}}/></RegisterButton>
         </StyledRegisterForm>
     )
 }

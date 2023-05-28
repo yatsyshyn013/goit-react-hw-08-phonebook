@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { Link, Outlet, NavLink} from "react-router-dom";
-import { Header, StyledLinks } from "./SharedLayout.styled";
+import { Outlet} from "react-router-dom";
 import { AppBar } from "components/AppBar/AppBar";
 
 const SharedLayout = () => {

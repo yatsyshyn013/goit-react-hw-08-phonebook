@@ -16,14 +16,6 @@ import { contactsReducer } from "./contacts/contactsSlice";
 import { filtersReducer } from "./contacts/filterSlice";
 import { authReducer } from "./auth/authSlice";
 
-// const middleware = [
-//   ...getDefaultMiddleware({
-//     serializableCheck: {
-//       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//     },
-//   }),
-// ];
-
 const authPersistConfig = {
   key: 'auth',
   storage,

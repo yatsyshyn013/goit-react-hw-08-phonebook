@@ -1,4 +1,4 @@
-import { Header, StyledLinks } from "../SharedLayout/SharedLayout.styled"
+import { StyledLinks } from "../SharedLayout/SharedLayout.styled"
 
 export const AuthNav = () => {
     return (<div>

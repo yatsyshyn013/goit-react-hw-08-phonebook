@@ -1,6 +1,5 @@
-import { Suspense } from "react";
-import { Link, Outlet, NavLink} from "react-router-dom";
-import { Header, StyledLinks } from "../SharedLayout/SharedLayout.styled"
+
+import { Header } from "../SharedLayout/SharedLayout.styled"
 import { Navigation } from "components/Navigation/Navigation";
 import { useAuth } from "hooks/useAuth";
 import { UserMenu } from "components/UserMenu/UserMenu";

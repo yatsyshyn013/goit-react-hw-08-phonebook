@@ -1,10 +1,16 @@
-import { Label } from "components/ContactForm/ContactForm.styled"
+
 import { LoginForm } from "components/LoginForm/LoginForm"
+import { ToastContainer } from "react-toastify"
 
 const Login = () => {
 
     return (<div>
-       <LoginForm/>
+        <LoginForm />
+        <ToastContainer
+          autoClose={3000}
+          position="top-center"
+          theme="colored"
+/>
     </div>)
     
 }

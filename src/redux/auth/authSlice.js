@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { logInFetch, logOutFetch, refreshUser, registerFetch } from "./authOperations";
+// import { ToastContainer, toast } from 'react-toastify';
+
 
 const authSlice = createSlice({
     name: 'auth',
@@ -18,8 +20,9 @@ const authSlice = createSlice({
         .addCase(logInFetch.fulfilled, (state, action) => {
                 state.user = action.payload.user;
                 state.token = action.payload.token;
-                state.isLoggedIn = true;
-    })
+            state.isLoggedIn = true;
+            
+        })
     .addCase(logOutFetch.fulfilled, (state, action) => {
                 state.user = {name: null, email: null };
                 state.token = null;

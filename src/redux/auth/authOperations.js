@@ -1,5 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
@@ -22,8 +24,10 @@ export const registerFetch = createAsyncThunk(
       const response = await axios.post("/users/signup", credentials);
       // При успішному запиті повертаємо проміс із даними
       setAuthHeader(response.data.token)  
+      // toast.success(`Welcome, ${response.data.user.name}`);
       return response.data;
     } catch (e) {
+      toast.error('You did not fill out the registration form correctly, please try again');
       // При помилці запиту повертаємо проміс
       // який буде відхилений з текстом помилки
       return thunkAPI.rejectWithValue(e.message);
@@ -37,12 +41,22 @@ export const logInFetch = createAsyncThunk(
 
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post("/users/login", credentials);
 
-      setAuthHeader(response.data.token)  
+      const response = await axios.post("/users/login", credentials);
+      // toast.success(`Welcome, ${response.data.user.name}`);
+      setAuthHeader(response.data.token)
+    
+        
+      
+      
+      
+      console.log(response.data);
       return response.data;
     } catch (e) {
-   
+      // console.log("hi");
+      
+      toast.error('You entered an incorrect password or login, please try again');
+       
       return thunkAPI.rejectWithValue(e.message);
     }
   }
