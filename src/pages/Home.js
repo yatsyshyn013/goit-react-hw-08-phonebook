@@ -31,7 +31,7 @@ const Home = () => {
     const steps = [
   {
     label: 'Authorization benefits',
-    description: `To use the service, you need to register your own account. For registered users, just log in.And you will get your own account with access to the contact bookю`,
+    description: `To use the service, you need to register your own account. Registered users only need to log in. Accordingly, you get your own contact book attached to your account.`,
   },
   {
     label: 'Keep your contact book in a safe place',
