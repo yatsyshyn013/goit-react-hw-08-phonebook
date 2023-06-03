@@ -4,6 +4,7 @@ import { logInFetch } from "redux/auth/authOperations"
 // import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import LoginIcon from '@mui/icons-material/Login';
+import { trackEvents } from "components/trackEvents";
 // import { toast, ToastContainer } from 'react-toastify';
 
 export const LoginForm = () => {
@@ -23,9 +24,10 @@ export const LoginForm = () => {
       
 //         <script type="text/javascript">
 //         $('#addToCartButton').click(function() {
-        fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+        // fbq('track', 'Purchase', {currency: "USD", value: 30.00});
 //         });
 //         </script>
+        trackEvents();
         
         form.reset()
     }
