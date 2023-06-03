@@ -20,6 +20,12 @@ export const LoginForm = () => {
             email: form.elements.email.value,
             password: form.elements.password.value
         }))
+      
+//         <script type="text/javascript">
+//         $('#addToCartButton').click(function() {
+        fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+//         });
+//         </script>
         
         form.reset()
     }
