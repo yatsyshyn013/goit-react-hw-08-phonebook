@@ -1,3 +1,3 @@
-export const trackEvents = () => {
-    fbq('track', 'Reload');
-}
+// export const trackEvents = () => {
+//     fbq('track', 'Reload');
+// }
